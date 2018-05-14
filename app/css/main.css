@@ -109,6 +109,7 @@
   color: #434343;
   line-height: .8;
   top: -10px;
+  text-align: center;
   left: 35%;
   z-index: 3;
   text-transform: none; }
@@ -141,7 +142,6 @@
   z-index: 7; }
 
 .start__wrapper {
-  padding: 250px 0 225px 0;
   background-position: center;
   background-size: cover;
   background-image: url("../img/main/1.png");
@@ -158,6 +158,9 @@
     background: #111;
     opacity: .4;
     z-index: -1; }
+
+.start__inner {
+  padding: 250px 0 225px 0; }
 
 .start__title {
   font-weight: bold;
@@ -185,12 +188,12 @@
     background: #ffffff; }
 
 .start__round {
-  position: absolute;
   background: #fff;
   height: 110px;
   width: 110px;
-  bottom: -65px;
-  left: 46%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
   border-radius: 50%;
   cursor: pointer;
   padding-bottom: 30px; }
@@ -232,29 +235,52 @@
   padding: 105px 0 60px 0; }
 
 .welcome__item {
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 170px 0 0 0;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  z-index: 1; }
+  .welcome__item::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    opacity: .6;
+    position: absolute;
+    z-index: -1; }
+  .welcome__item-left {
+    background-image: url("../img/welcome/wel1.png"); }
+  .welcome__item-middle {
+    background-image: url("../img/welcome/wel2.png"); }
+  .welcome__item-right {
+    background-image: url("../img/welcome/wel3.png"); }
 
 .welcome__title {
   color: #fff;
-  position: absolute;
-  left: 35%;
-  top: 40%;
   line-height: 1;
   font-family: "Yellowtail";
   font-size: 45px;
-  text-align: center; }
-
-.welcome__img {
-  width: 100%; }
+  text-align: center;
+  margin-bottom: 130px; }
+  .welcome__title-food {
+    color: #fff;
+    line-height: 1;
+    font-family: "Yellowtail";
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 85px; }
 
 .welcome__round {
   width: 75px;
   height: 75px;
   background: #ffffff;
   border-radius: 50%;
-  position: absolute;
-  bottom: -40px;
-  left: 40%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
   padding-bottom: 10px;
   display: -webkit-box;
   display: -webkit-flex;
